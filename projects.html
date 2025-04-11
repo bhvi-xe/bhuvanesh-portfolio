@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Project - Bhuvanesh SP</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/projects">Projects</a>
+        <a href="/skills">Skills</a>
+        <a href="/contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <div class="right-img"> <!-- img aligned LEFT -->
+           <img src="{{ url_for('static', filename='library.png') }}" alt="Library Project Image" class="toggle-image">
+
+        </div>
+        <div class="left-text"> <!-- text aligned RIGHT of the image -->
+            <h1>Library Management System</h1>
+            <p>This project is built using Oracle Database and Python. It manages book inventory, borrowing records, and search functionalities with a stylish frontend using Flask.</p>
+            <p>Technologies used: Python, SQL*Plus, Oracle DB, Flask, HTML/CSS</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About - Bhuvanesh SP</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <button class="toggle-theme">Toggle Theme</button>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/projects">Projects</a>
+        <a href="/skills">Skills</a>
+        <a href="/contact">Contact</a>
+    </nav>
+
+    <div class="container skills-container">
+        <div class="left-text">
+            <h1 class="toggle-text">About Me</h1>
+            <p>Hey! I'm <strong>Bhuvanesh SP</strong>, a passionate 19-year-old tech enthusiast currently working on a <strong>Library Management System</strong> using <strong>Oracle and Python</strong>.</p>
+            <p>I enjoy learning new technologies and developing projects that solve real problems. I'm especially interested in <strong>backend development</strong> and <strong>databases</strong>.</p>
+        </div>
+
+        <div class="right-img">
+            <img src="{{ url_for('static', filename='a.jpg') }}" alt="About Image" class="toggle-image">
+        </div>
+    </div>
+</body>
+</html>

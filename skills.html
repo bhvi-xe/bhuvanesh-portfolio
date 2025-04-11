@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skills - Bhuvanesh SP</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/projects">Projects</a>
+        <a href="/skills">Skills</a>
+        <a href="/contact">Contact</a>
+    </nav>
+
+    <button class="toggle-theme" onclick="toggleTheme()">Toggle Theme</button>
+
+    <div class="container">
+        <!-- Left Image -->
+        <div class="left-img">
+            <img src="{{ url_for('static', filename='python.jpg') }}" alt="Python" class="toggle-image">
+            <h1 class="toggle-text">Skills</h1>
+        </div>
+
+        <!-- Right Skill List -->
+        <div class="right-text">
+            <ul>
+                <li class="toggle-text">1. Python Programming</li>
+                <li class="toggle-text">2. SQL Plus (Oracle Database)</li>
+                <li class="toggle-text">3. Flask Framework</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

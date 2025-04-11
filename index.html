@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home - Bhuvanesh SP</title>
+    <meta name="description" content="Portfolio of Bhuvanesh SP - Tech enthusiast, Python and Oracle Developer">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/projects">Projects</a>
+        <a href="/skills">Skills</a>
+        <a href="/contact">Contact</a>
+    </nav>
+    <div class="container">
+        <div class="left-text">
+            <h1>Bhuvanesh SP</h1>
+            <p>Age: 19</p>
+            <p>Contact: 8825718630</p>
+            <p>Project: Library Management System (Oracle + Python)</p>
+            <p>Skills: Python, SQL*Plus</p>
+        </div>
+        <div class="right-img">
+            <img src="{{ url_for('static', filename='b.jpg') }}" alt="Profile Image" class="profile-img toggle-image">
+        </div>
+    </div>
+</body>
+</html>
+

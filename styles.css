@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(-45deg, #2c3e50, #34495e, #000000, #2c3e50);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #fff;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    overflow-x: hidden;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    color: #1abc9c;
+    transform: scale(1.1);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    min-height: 100vh;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.left-text {
+    flex: 1;
+    transition: transform 0.4s, color 0.4s;
+}
+
+.left-text:hover {
+    transform: scale(1.02);
+    color: #1abc9c;
+}
+
+.right-img {
+    flex: 1;
+    max-width: 100%;
+    text-align: right;
+}
+
+.right-img img {
+    width: 100%;
+    max-height: 90vh;
+    object-fit: cover;
+    animation: fadeIn 2s ease forwards, floatImage 6s ease-in-out infinite;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+img.toggle-image {
+    transition: all 0.6s ease-in-out;
+    filter: brightness(1);
+    opacity: 0.9;
+    transform: scale(1);
+}
+
+img.toggle-image:hover {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(100px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes floatImage {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+button.toggle-theme {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 12px 18px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    font-size: 1em;
+    transition: transform 0.3s ease;
+    z-index: 1001;
+}
+
+button.toggle-theme:hover {
+    transform: scale(1.1);
+}
+
+/* ========== Skills Section Enhancements ========== */
+
+.container.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 4rem 2rem;
+    animation: fadeInBoth 2s ease forwards;
+}
+
+/* Left-side Python image */
+.left-img {
+    flex: 1;
+    text-align: center;
+    animation: fadeInLeft 1.5s ease forwards;
+}
+
+.left-img img.toggle-image {
+    width: 80%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    transition: all 0.6s ease-in-out;
+    opacity: 0.9;
+    transform: scale(1);
+}
+
+.left-img img.toggle-image:hover {
+    opacity: 1;
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+/* Right-side skill text */
+.right-text {
+    flex: 1;
+    font-size: 1.2em;
+    line-height: 2;
+    animation: fadeInRight 1.5s ease forwards;
+    transition: transform 0.4s ease;
+    color: #ffffff;
+}
+
+.right-text:hover {
+    transform: scale(1.02);
+}
+
+.right-text ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.right-text li {
+    margin-bottom: 12px;
+    padding-left: 10px;
+    position: relative;
+}
+
+.right-text li::before {
+    content: '';
+    position: absolute;
+    left: -25px;
+}
+
+/* Smooth text hover */
+.toggle-text {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.toggle-text:hover {
+    color: #1abc9c;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInBoth {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive (Mobile) */
+@media (max-width: 768px) {
+    .container.skills-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left-img, .right-text {
+        flex: unset;
+        width: 100%;
+    }
+
+    .right-text ul {
+        text-align: left;
+        margin-top: 2rem;
+    }
+}
